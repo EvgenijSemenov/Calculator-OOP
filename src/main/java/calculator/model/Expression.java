@@ -47,8 +47,6 @@ public class Expression {
     }
 
     private String[] tokenize(String expression) {
-        //expression = insertBlanks(expression);
-
         return expression.split("\\s+");
     }
 
