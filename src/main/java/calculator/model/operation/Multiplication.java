@@ -2,11 +2,7 @@ package main.java.calculator.model.operation;
 
 import main.java.calculator.model.value.Value;
 
-public class Multiplication extends Operation {
-
-    public Multiplication() {
-        priority = MEDIUM;
-    }
+public class Multiplication implements Operation {
 
     @Override
     public Value execute(Value value1, Value value2) {

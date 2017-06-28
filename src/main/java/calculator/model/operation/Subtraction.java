@@ -2,11 +2,7 @@ package main.java.calculator.model.operation;
 
 import main.java.calculator.model.value.Value;
 
-public class Subtraction extends Operation {
-
-    public Subtraction() {
-        priority = LOW;
-    }
+public class Subtraction implements Operation {
 
     @Override
     public Value execute(Value value1, Value value2) {
