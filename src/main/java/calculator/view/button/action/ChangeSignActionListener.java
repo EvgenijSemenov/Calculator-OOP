@@ -1,16 +1,12 @@
 package main.java.calculator.view.button.action;
 
 import main.java.calculator.view.DisplayPanel;
-
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class ChangeSignActionListener implements ActionListener{
+public class ChangeSignActionListener extends CalculatorActionListener{
 
-    private DisplayPanel displayPanel;
-
-    public ChangeSignActionListener(DisplayPanel displayPanel) {
-        this.displayPanel = displayPanel;
+    protected ChangeSignActionListener(DisplayPanel displayPanel) {
+        super(displayPanel);
     }
 
     @Override

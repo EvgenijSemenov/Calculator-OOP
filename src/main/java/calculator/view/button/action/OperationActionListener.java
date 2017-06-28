@@ -4,14 +4,11 @@ import main.java.calculator.model.Calculator;
 import main.java.calculator.view.DisplayPanel;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class OperationActionListener implements ActionListener {
+public class OperationActionListener extends CalculatorActionListener {
 
-    private DisplayPanel displayPanel;
-
-    public OperationActionListener(DisplayPanel displayPanel) {
-        this.displayPanel = displayPanel;
+    protected OperationActionListener(DisplayPanel displayPanel) {
+        super(displayPanel);
     }
 
     @Override
