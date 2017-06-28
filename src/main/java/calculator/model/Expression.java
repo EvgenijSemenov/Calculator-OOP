@@ -50,21 +50,6 @@ public class Expression {
         return expression.split("\\s+");
     }
 
-    private static String insertBlanks(String s) {
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < s.length(); ++i) {
-            char c = s.charAt(i);
-
-            if (c == '(' || c == ')' || c == '+' || c == '-' || c == '*' || c == '/') {
-                result.append(' ').append(c).append(' ');
-            } else {
-                result.append(c);
-            }
-        }
-
-        return result.toString();
-    }
-
     private Operation operationByToken(String token) {
         Operation operation = null;
         switch (token) {
