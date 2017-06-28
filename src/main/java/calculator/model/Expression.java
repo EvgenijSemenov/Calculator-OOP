@@ -8,8 +8,8 @@ import java.util.LinkedList;
 
 public class Expression {
 
-    LinkedList<Value> values = new LinkedList<Value>();
-    LinkedList<Operation> operations = new LinkedList<Operation>();
+    private LinkedList<Value> values = new LinkedList<Value>();
+    private LinkedList<Operation> operations = new LinkedList<Operation>();
 
     public Expression(String expression) {
         String[] tokens = tokenize(expression);
