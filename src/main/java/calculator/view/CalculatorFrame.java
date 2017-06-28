@@ -5,14 +5,18 @@ import java.awt.*;
 
 public class CalculatorFrame extends JFrame {
 
-    private int width = 350;
-    private int height = 400;
+    private final int width = 350;
+    private final int height = 400;
+    private final int rows = 2;
+    private final int cols = 1;
+    private final int hgap = 5;
+    private final int vgap = 5;
 
     public CalculatorFrame(DisplayPanel displayPanel, ButtonPanel buttonPanel) {
         super("Calculator");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        setLayout(new GridLayout(2, 1, 5, 5));
+        setLayout(new GridLayout(rows, cols, hgap, vgap));
 
         add(displayPanel);
         add(buttonPanel);
