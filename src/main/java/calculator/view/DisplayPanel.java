@@ -7,17 +7,12 @@ public class DisplayPanel extends JPanel {
 
     private JLabel expressionLabel = new JLabel();
     private JLabel resultLabel = new JLabel("0");
-    public boolean expressionLabelChanged = false;
+    private boolean expressionLabelChanged = false;
 
     public DisplayPanel() {
         setLayout(new GridLayout(2, 1));
         add(expressionLabel);
         add(resultLabel);
-    }
-
-    public void clearAll() {
-        clearExpression();
-        clearResult();
     }
 
     public void clearResult() {
@@ -28,11 +23,29 @@ public class DisplayPanel extends JPanel {
         expressionLabel.setText("");
     }
 
+    public void clearAll() {
+        clearExpression();
+        clearResult();
+    }
+
     public void deleteLastResultSymbol() {
         if (resultLabel.getText().length() > 1 || resultLabel.getText().startsWith("-")) {
             resultLabel.setText(resultLabel.getText().substring(0, resultLabel.getText().length() - 1));
         } else {
             resultLabel.setText("0");
+        }
+    }
+
+    public void changeResultSign() {
+        if (resultLabel.getText().equals("0")) {
+            return;
+        }
+
+        String result = resultLabel.getText();
+        if (result.startsWith("-")) {
+            resultLabel.setText(result.substring(1, result.length()));
+        } else {
+            resultLabel.setText("-" + result);
         }
     }
 
@@ -56,6 +69,10 @@ public class DisplayPanel extends JPanel {
         return resultLabel.getText();
     }
 
+    public void setResult(String result) {
+        resultLabel.setText(result);
+    }
+
     public String getExpression() {
         return expressionLabel.getText();
     }
@@ -63,23 +80,6 @@ public class DisplayPanel extends JPanel {
     public void setExpression(String text) {
         expressionLabel.setText(text);
         expressionLabelChanged = true;
-    }
-
-    public void changeResultSign() {
-        if (resultLabel.getText().equals("0")) {
-            return;
-        }
-
-        String result = resultLabel.getText();
-        if (result.startsWith("-")) {
-            resultLabel.setText(result.substring(1, result.length()));
-        } else {
-            resultLabel.setText("-" + result);
-        }
-    }
-
-    public void setResult(String result) {
-        resultLabel.setText(result);
     }
 
 }
