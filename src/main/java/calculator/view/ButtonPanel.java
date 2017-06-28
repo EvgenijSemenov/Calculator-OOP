@@ -19,10 +19,10 @@ public class ButtonPanel extends JPanel {
         LinkedList<JButton> numberButtons = new NumberButton(displayPanel).getButtonList();
         LinkedList<JButton> operationButtons = new OperationButton(displayPanel).getButtonList();
 
-        sortButton(numberButtons, operationButtons);
+        addButton(numberButtons, operationButtons);
     }
 
-    private void sortButton(LinkedList<JButton> numberButtons, LinkedList<JButton> operationButtons) {
+    private void addButton(LinkedList<JButton> numberButtons, LinkedList<JButton> operationButtons) {
         for (int row = 1; row <= rows; row++) {
             for (int col = 1; col <= cols; col++) {
                 if (row < 3) {
