@@ -26,31 +26,19 @@ public class ButtonPanel extends JPanel {
         for (int row = 1; row <= rows; row++) {
             for (int col = 1; col <= cols; col++) {
                 if (row < 3) {
-                    if (operationButtons.size() == 0) {
-                        add(new JButton());
-                        continue;
-                    }
                     add(operationButtons.getFirst());
                     operationButtons.remove(operationButtons.getFirst());
                 } else {
                     if (col < 4) {
-                        if (numberButtons.size() == 0) {
-                            add(new JButton());
-                            continue;
-                        }
                         add(numberButtons.getFirst());
                         numberButtons.remove(numberButtons.getFirst());
                     } else {
-                        if (operationButtons.size() == 0) {
-                            add(new JButton());
-                            continue;
-                        }
                         add(operationButtons.getFirst());
                         operationButtons.remove(operationButtons.getFirst());
                     }
                 }
             }
         }
-
     }
+
 }
