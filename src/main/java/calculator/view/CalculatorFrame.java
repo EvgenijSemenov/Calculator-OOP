@@ -9,7 +9,7 @@ public class CalculatorFrame extends JFrame {
     private int height = 400;
 
     public CalculatorFrame(DisplayPanel displayPanel) {
-        super("Main");
+        super("Calculator");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         setLayout(new GridLayout(2, 1, 5, 5));
