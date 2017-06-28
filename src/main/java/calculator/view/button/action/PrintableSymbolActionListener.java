@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 
 public class PrintableSymbolActionListener extends CalculatorActionListener {
 
-    protected PrintableSymbolActionListener(DisplayPanel displayPanel) {
+    public PrintableSymbolActionListener(DisplayPanel displayPanel) {
         super(displayPanel);
     }
 

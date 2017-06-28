@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 
 public class OperationActionListener extends CalculatorActionListener {
 
-    protected OperationActionListener(DisplayPanel displayPanel) {
+    public OperationActionListener(DisplayPanel displayPanel) {
         super(displayPanel);
     }
 

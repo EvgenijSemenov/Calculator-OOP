@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 
 public class ChangeSignActionListener extends CalculatorActionListener{
 
-    protected ChangeSignActionListener(DisplayPanel displayPanel) {
+    public ChangeSignActionListener(DisplayPanel displayPanel) {
         super(displayPanel);
     }
 
