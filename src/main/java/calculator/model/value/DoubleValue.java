@@ -4,12 +4,12 @@ public class DoubleValue implements Value{
 
     private Double value;
 
-    public DoubleValue(Double doubleValue) {
-        value = doubleValue;
+    public DoubleValue(Double value) {
+        this.value = value;
     }
 
-    public DoubleValue(String doubleValue) {
-        value = Double.parseDouble(doubleValue);
+    public DoubleValue(String value) {
+        this.value = Double.parseDouble(value);
     }
 
     @Override
