@@ -1,15 +1,10 @@
 package main.java.calculator.view;
 
-
-import main.java.calculator.view.DisplayPanel;
 import main.java.calculator.view.button.NumberButton;
 import main.java.calculator.view.button.OperationButton;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.util.LinkedList;
-import java.util.List;
 
 public class ButtonPanel extends JPanel {
 
