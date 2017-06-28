@@ -5,12 +5,14 @@ import java.awt.*;
 
 public class DisplayPanel extends JPanel {
 
+    private final int rows = 2;
+    private final int cols = 1;
     private JLabel expressionLabel = new JLabel();
     private JLabel resultLabel = new JLabel("0");
     private boolean expressionLabelChanged = false;
 
     public DisplayPanel() {
-        setLayout(new GridLayout(2, 1));
+        setLayout(new GridLayout(rows, cols));
         add(expressionLabel);
         add(resultLabel);
     }
