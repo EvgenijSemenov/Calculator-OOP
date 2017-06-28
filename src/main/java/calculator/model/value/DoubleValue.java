@@ -2,7 +2,7 @@ package main.java.calculator.model.value;
 
 public class DoubleValue implements Value{
 
-    protected Double value;
+    private Double value;
 
     public DoubleValue(Double doubleValue) {
         value = doubleValue;
