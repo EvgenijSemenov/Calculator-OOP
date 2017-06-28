@@ -4,7 +4,6 @@ import main.java.calculator.model.Calculator;
 import main.java.calculator.model.value.DoubleValue;
 import main.java.calculator.model.value.Value;
 import main.java.calculator.view.DisplayPanel;
-
 import java.awt.event.ActionEvent;
 
 public class RootActionListener extends CalculatorActionListener {
