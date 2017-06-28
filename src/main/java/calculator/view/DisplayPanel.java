@@ -7,8 +7,10 @@ public class DisplayPanel extends JPanel {
 
     private final int rows = 2;
     private final int cols = 1;
-    private JLabel expressionLabel = new JLabel();
-    private JLabel resultLabel = new JLabel("0");
+    private final String emptyExpression = "";
+    private final String emptyResult = "0";
+    private JLabel expressionLabel = new JLabel(emptyExpression);
+    private JLabel resultLabel = new JLabel(emptyResult);
     private boolean expressionLabelChanged = false;
 
     public DisplayPanel() {
@@ -18,11 +20,11 @@ public class DisplayPanel extends JPanel {
     }
 
     public void clearResult() {
-        resultLabel.setText("0");
+        resultLabel.setText(emptyResult);
     }
 
     public void clearExpression() {
-        expressionLabel.setText("");
+        expressionLabel.setText(emptyExpression);
     }
 
     public void clearAll() {
@@ -34,12 +36,12 @@ public class DisplayPanel extends JPanel {
         if (resultLabel.getText().length() > 1 || resultLabel.getText().startsWith("-")) {
             resultLabel.setText(resultLabel.getText().substring(0, resultLabel.getText().length() - 1));
         } else {
-            resultLabel.setText("0");
+            resultLabel.setText(emptyResult);
         }
     }
 
     public void changeResultSign() {
-        if (resultLabel.getText().equals("0")) {
+        if (resultLabel.getText().equals(emptyResult)) {
             return;
         }
 
@@ -58,8 +60,8 @@ public class DisplayPanel extends JPanel {
         }
 
         if (text.length() == 0) {
-            resultLabel.setText("0");
-        } else if (resultLabel.getText().equals("0") || expressionLabelChanged) {
+            resultLabel.setText(emptyResult);
+        } else if (resultLabel.getText().equals(emptyResult) || expressionLabelChanged) {
             resultLabel.setText(text);
             expressionLabelChanged = false;
         } else {
