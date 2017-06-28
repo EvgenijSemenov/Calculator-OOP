@@ -5,8 +5,8 @@ import main.java.calculator.model.value.Value;
 public class Division implements Operation {
 
     @Override
-    public Value execute(Value value1, Value value2) {
-        return value1.divide(value2);
+    public Value execute(Value firstValue, Value secondValue) {
+        return firstValue.divide(secondValue);
     }
 
 }

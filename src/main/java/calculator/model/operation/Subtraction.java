@@ -5,8 +5,8 @@ import main.java.calculator.model.value.Value;
 public class Subtraction implements Operation {
 
     @Override
-    public Value execute(Value value1, Value value2) {
-        return value1.substract(value2);
+    public Value execute(Value firstValue, Value secondValue) {
+        return firstValue.substract(secondValue);
     }
 
 }
